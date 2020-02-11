@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hPT-PG-tkX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--InAppPurchase Test-->
+        <scene sceneID="kJK-xd-Akk">
+            <objects>
+                <viewController id="Xak-yl-Uzq" customClass="ViewController" customModule="ios_iap_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMK-DF-ke6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FYL-87-Opm">
+                                <rect key="frame" x="20" y="160" width="374" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpr-PJ-vIV">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="LfO-or-NqS"/>
+                                        </constraints>
+                                        <state key="normal" title="CheckPaymentAble">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="checkPaymentAble:" destination="Xak-yl-Uzq" eventType="touchUpInside" id="OU8-z5-33M"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWO-AN-E2F">
+                                        <rect key="frame" x="0.0" y="70" width="374" height="50"/>
+                                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="obJ-uo-kVr"/>
+                                        </constraints>
+                                        <state key="normal" title="Payment">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tryPaymentQueue:" destination="Xak-yl-Uzq" eventType="touchUpInside" id="st9-Yk-nXa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FYL-87-Opm" firstAttribute="top" secondItem="bbu-IB-sBd" secondAttribute="top" constant="20" id="Ool-rT-TUS"/>
+                            <constraint firstItem="bbu-IB-sBd" firstAttribute="trailing" secondItem="FYL-87-Opm" secondAttribute="trailing" constant="20" id="efW-fE-g1w"/>
+                            <constraint firstItem="bbu-IB-sBd" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FYL-87-Opm" secondAttribute="bottom" id="zCf-qg-xKM"/>
+                            <constraint firstItem="FYL-87-Opm" firstAttribute="leading" secondItem="bbu-IB-sBd" secondAttribute="leading" constant="20" id="zsZ-C4-Zpy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bbu-IB-sBd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="InAppPurchase Test" id="ZXl-5T-Reh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NM6-B6-wpa" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XCL-2X-svb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hPT-PG-tkX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="6sI-Az-GhW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xak-yl-Uzq" kind="relationship" relationship="rootViewController" id="5vk-tl-LZA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBC-6M-UEi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
